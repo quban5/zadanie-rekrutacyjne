@@ -123,7 +123,7 @@ body {
 
 .text-box {
     border: var(--elements-border) #000000;
-    width: 14rem;
+    width: 11.5rem;
     display: flex;
     justify-content: center;
     flex-grow: 1;
@@ -136,9 +136,13 @@ body {
     padding-top: 0.5rem;
 }
 
-@media (width > 900px) {
+@media (width >= 900px) {
     .content {
         justify-content: space-between;
+    }
+
+    .squares-and-stripes-wrapper {
+        display: contents;
     }
 
     .stripes-and-circle-container {
@@ -153,5 +157,32 @@ body {
 
     .text-box {
         background-color: #ffffff;
+    }
+}
+
+@media (width < 900px) {
+    .content {
+        justify-content: space-between;
+    }
+
+    .text-box {
+        background-color: #c83737;
+    }
+
+    .squares-and-stripes-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stripes-and-circle-container {
+        justify-content: flex-start;
+        padding-top: 10rem;
+        padding-left: 0.5rem;
+    }
+
+    .text-box-container{
+        padding-right: 1.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 1.5rem;
     }
 }
